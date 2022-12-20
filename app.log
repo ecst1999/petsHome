@@ -1,0 +1,114 @@
+2022-12-19T20:40:48.682-05:00  INFO 15132 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 15132 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:40:48.683-05:00  INFO 15132 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:40:49.331-05:00  INFO 15132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:40:49.434-05:00  INFO 15132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:40:50.078-05:00  INFO 15132 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:40:50.154-05:00  INFO 15132 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:40:50.327-05:00  WARN 15132 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:40:50.525-05:00  INFO 15132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:40:50.779-05:00  INFO 15132 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a38e4dc
+2022-12-19T20:40:50.783-05:00  INFO 15132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:40:50.831-05:00  INFO 15132 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:40:52.315-05:00  INFO 15132 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:40:52.329-05:00  INFO 15132 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:40:53.242-05:00  WARN 15132 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:40:53.697-05:00  WARN 15132 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:40:53.811-05:00  INFO 15132 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.549 seconds (process running for 6.745)
+2022-12-19T20:40:54.239-05:00  INFO 15132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:40:54.243-05:00  INFO 15132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:40:54.249-05:00  INFO 15132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-19T20:41:41.515-05:00  INFO 10680 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 10680 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:41:41.518-05:00  INFO 10680 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:41:42.208-05:00  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:41:42.319-05:00  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:41:42.940-05:00  INFO 10680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:41:43.003-05:00  INFO 10680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:41:43.199-05:00  WARN 10680 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:41:43.395-05:00  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:41:43.616-05:00  INFO 10680 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5203c80f
+2022-12-19T20:41:43.620-05:00  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:41:43.656-05:00  INFO 10680 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:41:44.913-05:00  INFO 10680 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:41:44.937-05:00  INFO 10680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:41:45.766-05:00  WARN 10680 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:41:46.192-05:00  WARN 10680 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:41:46.341-05:00  INFO 10680 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.28 seconds (process running for 6.592)
+2022-12-19T20:41:46.831-05:00  INFO 10680 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:41:46.838-05:00  INFO 10680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:41:46.849-05:00  INFO 10680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-19T20:43:02.444-05:00  INFO 13208 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 13208 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:43:02.446-05:00  INFO 13208 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:43:03.288-05:00  INFO 13208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:43:03.410-05:00  INFO 13208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:43:04.072-05:00  INFO 13208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:43:04.152-05:00  INFO 13208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:43:04.412-05:00  WARN 13208 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:43:04.666-05:00  INFO 13208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:43:04.908-05:00  INFO 13208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@221ca495
+2022-12-19T20:43:04.910-05:00  INFO 13208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:43:04.945-05:00  INFO 13208 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:43:06.262-05:00  INFO 13208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:43:06.274-05:00  INFO 13208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:43:07.115-05:00  WARN 13208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:43:07.594-05:00  WARN 13208 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:43:07.712-05:00  INFO 13208 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.81 seconds (process running for 7.069)
+2022-12-19T20:43:08.193-05:00  INFO 13208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:43:08.199-05:00  INFO 13208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:43:08.209-05:00  INFO 13208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-19T20:44:17.534-05:00  INFO 17160 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 17160 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:44:17.536-05:00  INFO 17160 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:44:18.279-05:00  INFO 17160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:44:18.386-05:00  INFO 17160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:44:19.016-05:00  INFO 17160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:44:19.101-05:00  INFO 17160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:44:19.300-05:00  WARN 17160 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:44:19.493-05:00  INFO 17160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:44:19.758-05:00  INFO 17160 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f56424d
+2022-12-19T20:44:19.762-05:00  INFO 17160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:44:19.810-05:00  INFO 17160 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:44:21.193-05:00  INFO 17160 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:44:21.202-05:00  INFO 17160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:44:21.997-05:00  WARN 17160 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:44:22.423-05:00  WARN 17160 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:44:22.549-05:00  INFO 17160 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.426 seconds (process running for 6.709)
+2022-12-19T20:44:23.030-05:00  INFO 17160 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:44:23.041-05:00  INFO 17160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:44:23.050-05:00  INFO 17160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-19T20:48:26.668-05:00  INFO 644 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 644 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:48:26.671-05:00  INFO 644 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:48:27.369-05:00  INFO 644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:48:27.455-05:00  INFO 644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:48:28.065-05:00  INFO 644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:48:28.150-05:00  INFO 644 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:48:28.403-05:00  WARN 644 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:48:28.609-05:00  INFO 644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:48:28.874-05:00  INFO 644 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b01c689
+2022-12-19T20:48:28.878-05:00  INFO 644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:48:28.926-05:00  INFO 644 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:48:30.224-05:00  INFO 644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:48:30.233-05:00  INFO 644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:48:31.043-05:00  WARN 644 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:48:31.443-05:00  WARN 644 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:48:31.593-05:00  INFO 644 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.34 seconds (process running for 6.588)
+2022-12-19T20:48:32.086-05:00  INFO 644 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:48:32.092-05:00  INFO 644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:48:32.103-05:00  INFO 644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-19T20:52:24.923-05:00  INFO 4876 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Starting PetsHomeApplicationTests using Java 17.0.4.1 with PID 4876 (started by javie in C:\Java\SPRING BOOT\petsHome)
+2022-12-19T20:52:24.925-05:00  INFO 4876 --- [main] c.u.petsHome.PetsHomeApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2022-12-19T20:52:25.668-05:00  INFO 4876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19T20:52:25.793-05:00  INFO 4876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 6 JPA repository interfaces.
+2022-12-19T20:52:26.531-05:00  INFO 4876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19T20:52:26.619-05:00  INFO 4876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-19T20:52:26.880-05:00  WARN 4876 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-19T20:52:27.111-05:00  INFO 4876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-19T20:52:27.370-05:00  INFO 4876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51424203
+2022-12-19T20:52:27.374-05:00  INFO 4876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-19T20:52:27.428-05:00  INFO 4876 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19T20:52:28.869-05:00  INFO 4876 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19T20:52:28.880-05:00  INFO 4876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:52:29.705-05:00  WARN 4876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19T20:52:30.100-05:00  WARN 4876 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-19T20:52:30.220-05:00  INFO 4876 --- [main] c.u.petsHome.PetsHomeApplicationTests    : Started PetsHomeApplicationTests in 5.761 seconds (process running for 7.097)
+2022-12-19T20:52:30.698-05:00  INFO 4876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19T20:52:30.706-05:00  INFO 4876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-19T20:52:30.716-05:00  INFO 4876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
