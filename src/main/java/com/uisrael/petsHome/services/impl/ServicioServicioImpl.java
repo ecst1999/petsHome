@@ -34,4 +34,22 @@ public class ServicioServicioImpl implements IServicioServicio {
 		
 	}
 
+	@Override
+	public List<Servicio> buscarServicioPorConsultorio(String consultorio) {
+		// TODO Auto-generated method stub
+		return servicioRepositorio.buscarServicioPorConsultorio(consultorio);
+	}
+
+	@Override
+	public List<Servicio> buscarServicioPorNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return servicioRepositorio.buscarServicioPorNombre(nombre);
+	}
+
+	@Override
+	public List<Servicio> buscarServicioPorTipo(String tipoServicio) {
+		// TODO Auto-generated method stub
+		return servicioRepositorio.buscarServicioPorTipo(tipoServicio);
+	}
+
 }

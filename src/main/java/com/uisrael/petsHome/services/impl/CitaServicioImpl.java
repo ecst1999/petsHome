@@ -1,11 +1,13 @@
 package com.uisrael.petsHome.services.impl;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 
 import com.uisrael.petsHome.model.entity.Cita;
+import com.uisrael.petsHome.model.entity.Mascota;
 import com.uisrael.petsHome.model.repository.ICitaRepositorio;
 import com.uisrael.petsHome.services.ICitaServicio;
 
@@ -32,5 +34,24 @@ public class CitaServicioImpl implements ICitaServicio {
 	public List<Cita> listarCitas() {
 		return citaRepositorio.findAll();
 	}
+
+	@Override
+	public List<Cita> buscarCitaPorFecha(LocalDate fecha) {
+		// TODO Auto-generated method stub
+		return citaRepositorio.buscarCitaPorFecha(fecha);
+	}
+
+	@Override
+	public List<Cita> buscarCitaPorEstado(Boolean estado) {
+		// TODO Auto-generated method stub
+		return citaRepositorio.buscarCitaPorEstado(estado);
+	}
+
+	@Override
+	public List<Cita> buscarCitaPorMotivo(String motivo) {
+		// TODO Auto-generated method stub
+		return citaRepositorio.buscarCitaPorMotivo(motivo);
+	}
+	
 
 }

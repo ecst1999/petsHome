@@ -40,7 +40,7 @@ public class Duenio implements Serializable {
 	@OneToMany(mappedBy = "fkDuenio")
 	private List<Mascota> listaMascota = new ArrayList<>();
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "fkDireccion")
 	private Direccion fkDireccion;
 }

@@ -1,6 +1,7 @@
 package com.uisrael.petsHome.model.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.*;
@@ -21,17 +22,18 @@ public class Cita implements Serializable {
 	@Column(name = "cit_motivo", length = 150)
 	private String motivo;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name = "cit_fecha")
-	private Date fechaCita;
+	private LocalDate fechaCita;
 	
 	@Column(name = "cit_estado")
 	private boolean estadoCita;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "fkMascota")
 	private Mascota fkMascota;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name =  "fkServicio")
 	private Servicio fkServicio;
 }

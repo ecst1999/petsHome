@@ -1,6 +1,7 @@
 package com.uisrael.petsHome.model.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -32,13 +33,14 @@ public class Mascota implements Serializable{
 	@Column(name = "mas_genero", length = 40)
 	private String genero;
 
+	@Temporal(TemporalType.DATE)
 	@Column(name = "mas_fecha_nacimiento")
-	private Date fechaNacimiento;
+	private LocalDate fechaNacimiento;
 
 	@Column(name = "mas_estado")
 	private boolean estadoMacota;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "fkDuenio")
 	private Duenio fkDuenio;
 	

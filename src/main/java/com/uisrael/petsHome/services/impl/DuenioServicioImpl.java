@@ -33,4 +33,22 @@ public class DuenioServicioImpl implements IDuenioServicio {
 		return duenioRepositorio.findAll();
 	}
 
+	@Override
+	public List<Duenio> buscarDuenioPorCedula(String cedula) {
+		// TODO Auto-generated method stub
+		return duenioRepositorio.buscarDuenioPorCedula(cedula);
+	}
+
+	@Override
+	public List<Duenio> buscarDuenioPorTelefono(String telefono) {
+		// TODO Auto-generated method stub
+		return duenioRepositorio.buscarDuenioPorTelefono(telefono);
+	}
+
+	@Override
+	public List<Duenio> buscarDuenioPorApellido(String apellido) {
+		// TODO Auto-generated method stub
+		return duenioRepositorio.buscarDuenioPorApellido(apellido);
+	}
+
 }
