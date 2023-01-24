@@ -18,18 +18,18 @@ PostGresSql Driver | Spring Data JPA | Lombok | Spring web | Spring Boot Dev Too
     |           Se almacena la herencia del JPARepository extends JpaRepository<T, Integer>
 
 
-    +---Estructura de cadena de configuracion application.properties
-    ```
-    spring.datasource.url=jdbc:postgresql://localhost:5432/base
-    spring.datasource.username=
-    spring.datasource.password=
-    spring.datasource.dbcp2.driver-class-name=org.postgresql.Driver
-    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+# Estructura de cadena de configuracion application.properties
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/base
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.dbcp2.driver-class-name=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
-    logging.level.org.hibernate.sql=debug
-    spring.jpa.show-sql=true
-    spring.jpa.hibernate.ddl-auto=update
+logging.level.org.hibernate.sql=debug
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
 
-    log4j.rootLogger=DEBUG, console
-    ``` 
+log4j.rootLogger=DEBUG, console
+``` 
 
