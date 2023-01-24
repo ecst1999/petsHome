@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
-<title>Listado de citas</title>
+<title>Listado de dueños</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="description" />
 <meta content="ecst1999" name="author" />
@@ -228,18 +228,18 @@
 			<!-- BEGIN breadcrumb -->
 			<ol class="breadcrumb float-xl-end">
 				<li class="breadcrumb-item"><a href="javascript:;">Inicio</a></li>
-				<li class="breadcrumb-item active">Citas</li>
+				<li class="breadcrumb-item active">Dueños</li>
 			</ol>
 			<!-- END breadcrumb -->
 			<!-- BEGIN page-header -->
 			<h1 class="page-header">
-				Citas
+				Dueños
 			</h1>
 			<!-- END page-header -->
 			<!-- BEGIN panel -->
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
-					<h4 class="panel-title">Listado de citas</h4>
+					<h4 class="panel-title">Listado de dueños</h4>
 					<div class="panel-heading-btn">						 
 						<a href="javascript:;" class="btn btn-xs btn-icon btn-warning" data-toggle="panel-collapse">
 							<i class="fa fa-minus"></i>
@@ -253,17 +253,21 @@
 					<table id="data-table-buttons" class="table table-striped table-bordered align-middle">
 						<thead>
 							<tr>
-								<th class="text-nowrap">Codigo cita</th>
-								<th class="text-nowrap">Motivo cita</th>
-								<th class="text-nowrap">Fecha cita</th>
-								<th class="text-nowrap"></th>
+								<th class="text-nowrap">Cédula dueño</th>
+								<th class="text-nowrap">Nombre</th>
+								<th class="text-nowrap">Apellido</th>
+								<th class="text-nowrap">Telefono</th>
+								<th class="text-nowrap">Email</th>
+								<th class="text-nowrap">Acción</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="odd gradeX" th:each="cita: ${citas}">
-								<td th:text="${cita.idCita}"></td>
-								<td th:text="${cita.motivo}"></td>
-								<td th:text="${cita.fechaCita}"></td>
+							<tr class="odd gradeX" th:each="duenio: ${duenios}">
+								<td th:text="${duenio.cedula}"></td>
+								<td th:text="${duenio.nombre}"></td>
+								<td th:text="${duenio.apellido}"></td>
+								<td th:text="${duenio.telefono}"></td>
+								<td th:text="${duenio.email}"></td>
 								<td>
 									<a class="btn btn-danger">
 										<i class="fa fa-trash"></i>
