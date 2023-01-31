@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/plantilla/template}">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de direcciones</title>
+</head>
+<body>
+	<div layout:fragment="contenidoPagina">
+		<form autocomplete="off" th:action="@{/guardarDireccion}" th:object="${direccion}" method="post">
+			<div class="mb-3">
+				<label for="callePrincipal" class="form-label">Calle
+					principal</label> <input type="text" class="form-control"
+					id="callePrincipal" th:field="*{callePrincipal}">
+			</div>
+			<div class="mb-3">
+				<label for="calleSecundaria" class="form-label">Calle
+					secundaria</label> <input type="text" class="form-control"
+					id="calleSecundaria" th:field="*{calleSecundaria}">
+			</div>
+			<div class="mb-3">
+				<label for="numeracion" class="form-label">Numeración</label> <input
+					type="text" class="form-control" id="numeracion" th:field="*{numeracion}">
+			</div>
+			<div class="mb-3">
+				<label for="referencia" class="form-label">Referencia</label> <input
+					type="text" class="form-control" id="referencia" th:field="*{referencia}">
+			</div>
+			<div class="mb-3">
+				<label for="codigoPostal" class="form-label">Código postal</label> <input
+					type="text" class="form-control" id="codigoPostal" th:field="*{codigoPostal}">
+			</div>
+			<div class="mb-3">
+				<label for="ciudad" class="form-label">Ciudad</label> <input
+					type="text" class="form-control" id="ciudad" th:field="*{ciudad}">
+			</div>
+			<div class="mb-3">
+				<label for="provincia" class="form-label">Provincia</label> <input
+					type="text" class="form-control" id="provincia" th:field="*{provincia}">
+			</div>
+			<div class="mb-3">
+				<label for="pais" class="form-label">País</label> <input type="text"
+					class="form-control" id="pais" th:field="*{pais}">
+			</div>
+			<input type="hidden" th:field="*{idDireccion}">
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+</body>
+</html>
