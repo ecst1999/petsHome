@@ -4,11 +4,16 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "cita")
 public class Cita implements Serializable {
 
@@ -23,6 +28,7 @@ public class Cita implements Serializable {
 	private String motivo;
 	
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "cit_fecha")
 	private LocalDate fechaCita;
 	

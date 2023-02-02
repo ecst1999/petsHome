@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.uisrael.petsHome.model.entity.Direccion;
 import com.uisrael.petsHome.model.entity.Duenio;
+import com.uisrael.petsHome.services.IDireccionServicio;
 import com.uisrael.petsHome.services.IDuenioServicio;
 
 @Controller
@@ -21,6 +23,8 @@ public class DuenioController implements Serializable {
 	
 	@Autowired
 	private IDuenioServicio duenioServicio;
+	@Autowired
+	private IDireccionServicio direccionServicio;
 	
 	@GetMapping("/listarduenios")
 	public String listarDuenios(Model model){
@@ -32,6 +36,8 @@ public class DuenioController implements Serializable {
 	@GetMapping("/agregarduenio")
 	public String agregarDuenio(Model model) {
 		Duenio nuevoDuenio = new Duenio();
+		List<Direccion> listaDirecciones = direccionServicio.buscarDireccionPorEstado(true);
+		model.addAttribute("direcciones", listaDirecciones);
 		model.addAttribute("duenio", nuevoDuenio);
 		return "/duenio/agregarDuenio";
 	}
@@ -44,6 +50,8 @@ public class DuenioController implements Serializable {
 	
 	@GetMapping("/editarduenio/{idDue}")
 	public String editarDuenio(@PathVariable int idDue, Model model) {
+		List<Direccion> listaDirecciones = direccionServicio.buscarDireccionPorEstado(true);
+		model.addAttribute("direcciones", listaDirecciones);
 		model.addAttribute("duenio", duenioServicio.buscarDuenioPorId(idDue));
 		return "/duenio/agregarDuenio";
 	}

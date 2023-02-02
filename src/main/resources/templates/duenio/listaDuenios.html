@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div layout:fragment="contenidoPagina">
+		<a th:href="@{/agregarduenio}" class="btn btn-primary mb-3">Agregar dueño</a>
 		<table id="data-table-buttons"
 			class="table table-striped table-bordered align-middle">
 			<thead>
@@ -17,6 +18,7 @@
 					<th class="text-nowrap">Apellido</th>
 					<th class="text-nowrap">Telefono</th>
 					<th class="text-nowrap">Email</th>
+					<th class="text-nowrap">Dirección</th>
 					<th class="text-nowrap">Acción</th>
 				</tr>
 			</thead>
@@ -27,6 +29,7 @@
 					<td th:text="${duenio.apellido}"></td>
 					<td th:text="${duenio.telefono}"></td>
 					<td th:text="${duenio.email}"></td>
+					<td th:text="'Calle principal: ' + ${duenio.fkDireccion.callePrincipal} + ' Calle secundaria: ' + ${duenio.fkDireccion.calleSecundaria} + ' Numeración: ' + ${duenio.fkDireccion.numeracion}"></td>
 					<td><a class="btn btn-danger" th:href="@{/eliminarduenio/} + ${duenio.idDuenio}" onclick="return confirm('Esta seguro en eliminar el dueño?')"> <i class="fa fa-trash"></i>
 					</a> <a class="btn btn-primary" th:href="@{/editarduenio/} + ${duenio.idDuenio}"> <i class="fa fa-pencil"></i>
 					</a></td>

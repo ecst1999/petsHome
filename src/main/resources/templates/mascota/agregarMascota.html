@@ -8,10 +8,12 @@
 </head>
 <body>
 	<div layout:fragment="contenidoPagina">
-		<form autocomplete="off" th:action="@{/guardarmascota}" th:object="${mascota}" method="post">
+		<form autocomplete="off" th:action="@{/guardarmascota}"
+			th:object="${mascota}" method="post">
 			<div class="mb-3">
 				<label for="nombreMascota" class="form-label">Nombre de
-					mascota</label> <input type="text" class="form-control" id="nombreMascota" th:field="*{nombreMascota}">
+					mascota</label> <input type="text" class="form-control" id="nombreMascota"
+					th:field="*{nombreMascota}">
 			</div>
 			<div class="mb-3">
 				<label for="especie" class="form-label">Especie</label> <input
@@ -29,6 +31,16 @@
 				<label for="fechaNacimiento" class="form-label">Fecha
 					nacimiento</label> <input type="date" class="form-control"
 					id="fechaNacimiento" th:field="*{fechaNacimiento}">
+			</div>
+			<div class="mb-3">
+				<label for="fechaNacimiento" class="form-label">Dueño</label> <select
+					class="form-control" th:field="*{fkDuenio}">
+					<option value="" selected>Seleccione al Dueño</option>
+					<th:block th:each="duenio: ${duenios}">
+						<option th:value="${duenio.idDuenio}"
+							th:text="${duenio.cedula} + ' ' + ${duenio.nombre} + ' ' + ${duenio.apellido}"></option>
+					</th:block>
+				</select>
 			</div>
 			<input type="hidden" th:field="*{idMascota}">
 			<button type="submit" class="btn btn-primary">Guardar</button>

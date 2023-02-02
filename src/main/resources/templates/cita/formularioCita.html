@@ -20,6 +20,26 @@
 					type="date" class="form-control" id="fechaCita"
 					th:field="*{fechaCita}">
 			</div>
+			<div class="mb-3">
+				<label for="fechaCita" class="form-label">Mascota</label> <select
+					class="form-control" th:field="*{fkMascota}">
+					<option value="" selected>Seleccione mascota</option>
+					<th:block th:each="mascota: ${mascotas}">
+						<option th:value="${mascota.idMascota}"
+							th:text="${mascota.nombreMascota} + ' Dueño: ' + ${mascota.fkDuenio.nombre} + ' ' + ${mascota.fkDuenio.apellido}"></option>
+					</th:block>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="fechaCita" class="form-label">Servicio</label> <select
+					class="form-control" th:field="*{fkServicio}">
+					<option value="" selected>Seleccione servicio</option>
+					<th:block th:each="servicio: ${servicios}">
+						<option th:value="${servicio.idServicio}"
+							th:text="${servicio.nombreServicio} + ' Consultorio: ' + ${servicio.consultorio}"></option>
+					</th:block>
+				</select>
+			</div>
 			<input type="hidden" th:field="*{idCita}">
 			<button type="submit" class="btn btn-primary">Guardar</button>
 		</form>

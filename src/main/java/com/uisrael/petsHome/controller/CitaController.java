@@ -12,14 +12,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.uisrael.petsHome.model.entity.Cita;
+import com.uisrael.petsHome.model.entity.Mascota;
+import com.uisrael.petsHome.model.entity.Servicio;
 import com.uisrael.petsHome.services.ICitaServicio;
+import com.uisrael.petsHome.services.IMascotaServicio;
+import com.uisrael.petsHome.services.IServicioServicio;
 
 @Controller
 public class CitaController implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Autowired
 	private ICitaServicio citaServicio;
+	@Autowired
+	private IServicioServicio servicioServicio;
+	@Autowired
+	private IMascotaServicio mascotaServicio;
 	
 	@GetMapping("/listarcitas")
 	public String listadoCitas(Model model) {
@@ -31,12 +40,23 @@ public class CitaController implements Serializable {
 	@GetMapping("/agregarcita")
 	public String agregarCita(Model model) {
 		Cita nuevaCita = new Cita();
+		List<Mascota> listaMascotas = mascotaServicio.buscarMascotaPorEstado(true);
+		List<Servicio> listaServicios = servicioServicio.buscarServicioPorEstado(true);
+		
+		model.addAttribute("servicios", listaServicios);
+		model.addAttribute("mascotas", listaMascotas);
 		model.addAttribute("cita", nuevaCita);
+		
 		return "/cita/formularioCita";
 	}
 	
 	@GetMapping("/editarCita/{idCita}")
-	public String editarCita(@PathVariable Integer idCita, Model model) {		
+	public String editarCita(@PathVariable Integer idCita, Model model) {	
+		List<Mascota> listaMascotas = mascotaServicio.buscarMascotaPorEstado(true);
+		List<Servicio> listaServicios = servicioServicio.buscarServicioPorEstado(true);
+		
+		model.addAttribute("servicios", listaServicios);
+		model.addAttribute("mascotas", listaMascotas);
 		model.addAttribute("cita", citaServicio.buscarCitaPorId(idCita));
 		return "/cita/formularioCita";
 	}

@@ -6,11 +6,16 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "mascota")
 public class Mascota implements Serializable{
 
@@ -35,6 +40,7 @@ public class Mascota implements Serializable{
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "mas_fecha_nacimiento")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaNacimiento;
 
 	@Column(name = "mas_estado")
