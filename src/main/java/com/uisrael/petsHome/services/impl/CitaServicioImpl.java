@@ -52,6 +52,22 @@ public class CitaServicioImpl implements ICitaServicio {
 		// TODO Auto-generated method stub
 		return citaRepositorio.buscarCitaPorMotivo(motivo);
 	}
+
+	@Override
+	public Cita buscarCitaPorId(int id) {
+		// TODO Auto-generated method stub
+		return citaRepositorio.buscarCitaPorId(id);
+	}
+
+	@Override
+	public void eliminarCitaPorId(int id) {
+		// TODO Auto-generated method stub
+		try {			
+			citaRepositorio.eliminarCitaPorId(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 	
 
 }

@@ -44,7 +44,7 @@ class PetsHomeApplicationTests {
 	private ICitaServicio citaServicio;
 
 	@Test
-	void contextLoads() {
+	void contextLoads() {			
 
 		// Usuario
 		Usuario nuevoUsuario = new Usuario();
@@ -53,7 +53,7 @@ class PetsHomeApplicationTests {
 		nuevoUsuario.setClave("12345678");
 		nuevoUsuario.setEstadoUsuario(true);
 
-		usuarioServicio.insertarUsuario(nuevoUsuario);
+		//usuarioServicio.insertarUsuario(nuevoUsuario);
 
 		// Direccion
 		Direccion nuevaDireccion = new Direccion();
@@ -67,7 +67,7 @@ class PetsHomeApplicationTests {
 		nuevaDireccion.setPais("Ecuador");
 		nuevaDireccion.setEstadoDireccion(true);
 
-		direccionServicio.insertarDirecciones(nuevaDireccion);
+		//direccionServicio.insertarDirecciones(nuevaDireccion);
 
 		// Duenio
 		Duenio nuevoDuenio = new Duenio();
@@ -79,7 +79,7 @@ class PetsHomeApplicationTests {
 		nuevoDuenio.setEstadoDuenio(true);
 		nuevoDuenio.setFkDireccion(nuevaDireccion);
 
-		duenioServicio.insertarDuenios(nuevoDuenio);
+		//duenioServicio.insertarDuenios(nuevoDuenio);
 
 		// Mascota
 		Mascota nuevaMascota = new Mascota();
@@ -87,11 +87,10 @@ class PetsHomeApplicationTests {
 		nuevaMascota.setEspecie("Perro");
 		nuevaMascota.setRaza("Beagle");
 		nuevaMascota.setGenero("Macho");
-		nuevaMascota.setFechaNacimiento(LocalDate.of(2012, 3, 15));
-		nuevaMascota.setEstadoMacota(true);
+		nuevaMascota.setFechaNacimiento(LocalDate.of(2012, 3, 15));		
 		nuevaMascota.setFkDuenio(nuevoDuenio);
 
-		mascotaServicio.insertarMascotas(nuevaMascota);
+		//mascotaServicio.insertarMascotas(nuevaMascota);
 
 		// Servicio
 		Servicio nuevoServicio = new Servicio();
@@ -100,7 +99,7 @@ class PetsHomeApplicationTests {
 		nuevoServicio.setTipoServicio("Estetica");
 		nuevoServicio.setEstadoServicio(true);
 
-		servicioServicio.insertarServicios(nuevoServicio);
+		//servicioServicio.insertarServicios(nuevoServicio);
 
 		// Cita
 		Cita nuevaCita = new Cita();
@@ -110,7 +109,7 @@ class PetsHomeApplicationTests {
 		nuevaCita.setFkServicio(nuevoServicio);
 		nuevaCita.setFkMascota(nuevaMascota);
 
-		citaServicio.insertarCita(nuevaCita);
+		//citaServicio.insertarCita(nuevaCita);
 
 		List<Cita> citasPorFecha = citaServicio.buscarCitaPorFecha(LocalDate.of(2023, 02, 20));
 

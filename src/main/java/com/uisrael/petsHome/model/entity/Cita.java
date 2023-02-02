@@ -27,7 +27,7 @@ public class Cita implements Serializable {
 	private LocalDate fechaCita;
 	
 	@Column(name = "cit_estado")
-	private boolean estadoCita;
+	private boolean estadoCita = true;
 	
 	@ManyToOne
 	@JoinColumn(name = "fkMascota")

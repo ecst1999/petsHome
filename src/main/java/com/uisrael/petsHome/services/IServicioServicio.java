@@ -15,4 +15,10 @@ public interface IServicioServicio {
 	public List<Servicio> buscarServicioPorNombre(String nombre);
 	
 	public List<Servicio> buscarServicioPorTipo(String tipoServicio);
+	
+	public List<Servicio> buscarServicioPorEstado(Boolean estado);
+	
+	public Servicio buscarServicioPorId(int idServ);
+	
+	public void eliminarServicioPorId(int idServ);
 }

@@ -44,7 +44,7 @@ public class Direccion implements Serializable {
 	private String pais;
 
 	@Column(name = "dir_estado")
-	private boolean estadoDireccion;
+	private boolean estadoDireccion = true;
 	
 	@OneToMany(mappedBy = "fkDireccion")
 	private List<Duenio> listaDuenios = new ArrayList<>();

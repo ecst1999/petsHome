@@ -38,7 +38,7 @@ public class Mascota implements Serializable{
 	private LocalDate fechaNacimiento;
 
 	@Column(name = "mas_estado")
-	private boolean estadoMacota;
+	private boolean estadoMascota = true;
 	
 	@ManyToOne
 	@JoinColumn(name = "fkDuenio")

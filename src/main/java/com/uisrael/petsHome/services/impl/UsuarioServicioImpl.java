@@ -33,4 +33,26 @@ public class UsuarioServicioImpl implements IUsuarioServicio {
 		return usuarioRepositorio.findAll();
 	}
 
+	@Override
+	public List<Usuario> buscarUsuariosPorEstado(Boolean estado) {
+		// TODO Auto-generated method stub
+		return usuarioRepositorio.buscarUsuariosPorEstado(estado);
+	}
+
+	@Override
+	public Usuario buscarUsuarioPorId(int id) {
+		// TODO Auto-generated method stub
+		return usuarioRepositorio.buscarUsuarioPorId(id);
+	}
+
+	@Override
+	public void eliminarUsuarioPorId(int id) {
+		// TODO Auto-generated method stub
+		try {
+			usuarioRepositorio.eliminarUsuarioPorId(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
 }

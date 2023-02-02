@@ -51,6 +51,28 @@ public class DireccionServicioImpl implements IDireccionServicio {
 		return direccionRepositorio.buscarPorCallePrincipal(callePrincipal);
 	}
 
+	@Override
+	public List<Direccion> buscarDireccionPorEstado(Boolean estadoDireccion) {
+		// TODO Auto-generated method stub
+		return direccionRepositorio.buscarDireccionPorEstado(estadoDireccion);
+	}
+
+	@Override
+	public Direccion buscarDireccionPorId(int idDireccion) {
+		// TODO Auto-generated method stub
+		return direccionRepositorio.buscarDireccionPorId(idDireccion);
+	}
+
+	@Override
+	public void eliminarDireccionPorId(int idDir) {
+		// TODO Auto-generated method stub
+		try {
+			direccionRepositorio.eliminarDireccionPorId(idDir);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
 	
 	
 }

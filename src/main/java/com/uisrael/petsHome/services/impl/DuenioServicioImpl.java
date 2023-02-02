@@ -51,4 +51,22 @@ public class DuenioServicioImpl implements IDuenioServicio {
 		return duenioRepositorio.buscarDuenioPorApellido(apellido);
 	}
 
+	@Override
+	public Duenio buscarDuenioPorId(int idDuenio) {
+		// TODO Auto-generated method stub
+		return duenioRepositorio.buscarDuenioPorId(idDuenio);
+	}
+
+	@Override
+	public void eliminarDuenioPorId(int idDuenio) {
+		// TODO Auto-generated method stub
+		duenioRepositorio.eliminarDuenioPorId(idDuenio);
+	}
+
+	@Override
+	public List<Duenio>  buscarDuenioPorEstado(Boolean estado) {
+		// TODO Auto-generated method stub
+		return duenioRepositorio.buscarDuenioPorEstado(estado);
+	}
+
 }

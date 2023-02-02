@@ -1,311 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/plantilla/template}">
 <head>
-<meta charset="utf-8" />
-<title>Agregar mascota</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-<meta content="" name="description" />
-<meta content="ecst1999" name="author" />
-<link rel="icon" type="image/x-icon" th:href="@{/assets/img/favicon.png}">
-<!-- ================== BEGIN core-css ================== -->
-<link th:href="@{/assets/css/vendor.min.css}" rel="stylesheet" />
-<link th:href="@{/assets/css/default/app.min.css}" rel="stylesheet" />
-
-<link th:href="@{/assets/plugins/datatables.net-bs5/css/dataTables.bootstrap5.min.css}" rel="stylesheet" />
-<link th:href="@{/assets/plugins/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css}" rel="stylesheet" />
-<link th:href="@{/assets/plugins/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css}" rel="stylesheet" />
-<!-- ================== END core-css ================== -->
+<meta charset="UTF-8">
+<title>Formulario de mascotas</title>
 </head>
 <body>
-	<!-- BEGIN #loader -->
-	<div id="loader" class="app-loader">
-		<span class="spinner"></span>
+	<div layout:fragment="contenidoPagina">
+		<form autocomplete="off" th:action="@{/guardarmascota}" th:object="${mascota}" method="post">
+			<div class="mb-3">
+				<label for="nombreMascota" class="form-label">Nombre de
+					mascota</label> <input type="text" class="form-control" id="nombreMascota" th:field="*{nombreMascota}">
+			</div>
+			<div class="mb-3">
+				<label for="especie" class="form-label">Especie</label> <input
+					type="text" class="form-control" id="especie" th:field="*{especie}">
+			</div>
+			<div class="mb-3">
+				<label for="raza" class="form-label">Raza</label> <input type="text"
+					class="form-control" id="raza" th:field="*{raza}">
+			</div>
+			<div class="mb-3">
+				<label for="genero" class="form-label">Genero</label> <input
+					type="text" class="form-control" id="genero" th:field="*{genero}">
+			</div>
+			<div class="mb-3">
+				<label for="fechaNacimiento" class="form-label">Fecha
+					nacimiento</label> <input type="date" class="form-control"
+					id="fechaNacimiento" th:field="*{fechaNacimiento}">
+			</div>
+			<input type="hidden" th:field="*{idMascota}">
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
 	</div>
-	<!-- END #loader -->
-
-	<!-- BEGIN #app -->
-	<div id="app" class="app app-header-fixed app-sidebar-fixed">
-		<!-- BEGIN #header -->
-		<div id="header" class="app-header">
-			<!-- BEGIN navbar-header -->
-			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand"><span
-					class="navbar-logo"></span> <b>Pets</b> Home</a>
-				<button type="button" class="navbar-mobile-toggler"
-					data-toggle="app-sidebar-mobile">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-			</div>
-			<!-- END navbar-header -->
-			<!-- BEGIN header-nav -->
-			<div class="navbar-nav">
-
-				<div class="navbar-item navbar-user dropdown">
-					<a href="#"
-						class="navbar-link dropdown-toggle d-flex align-items-center"
-						data-bs-toggle="dropdown"> <img
-						th:src="@{/assets/img/user/user-13.jpg}" alt="" /> <span>
-							<span class="d-none d-md-inline">Steve Carvajal</span> <b
-							class="caret"></b>
-					</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-end me-1">						
-						<a href="#" class="dropdown-item">Cerrar Sesión</a>
-					</div>
-				</div>
-			</div>
-			<!-- END header-nav -->
-		</div>
-		<!-- END #header -->
-
-		<!-- BEGIN #sidebar -->
-		<div id="sidebar" class="app-sidebar">
-			<!-- BEGIN scrollbar -->
-			<div class="app-sidebar-content" data-scrollbar="true"
-				data-height="100%">
-				<!-- BEGIN menu -->
-				<div class="menu">
-					<div class="menu-profile">
-						<a href="javascript:;" class="menu-profile-link"
-							data-toggle="app-sidebar-profile"
-							data-target="#appSidebarProfileMenu">
-							<div class="menu-profile-cover with-shadow"></div>
-							<div class="menu-profile-image">
-								<img th:src="@{/assets/img/user/user-13.jpg}" alt="" />
-							</div>
-							<div class="menu-profile-info">
-								<div class="d-flex align-items-center">
-									<div class="flex-grow-1">Steve Carvajal</div>									
-								</div>
-								<small>PetsHome</small>
-							</div>
-						</a>
-					</div>
-					<div class="menu-header">Menú</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="far fa-calendar"></i>
-							</div>
-							<div class="menu-text">Citas</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listarcitas}" class="menu-link"><div
-										class="menu-text">Listado de citas</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregarcita}" class="menu-link"><div
-										class="menu-text">Agendar Citas</div></a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="fas fa-map-marker-alt"></i>
-							</div>
-							<div class="menu-text">Direcciones</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listardirecciones}" class="menu-link"><div
-										class="menu-text">Listado de direcciones</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregardireccion}" class="menu-link"><div
-										class="menu-text">Agregar direcciones</div></a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="far fa-address-card"></i>
-							</div>
-							<div class="menu-text">Dueños</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listarduenios}" class="menu-link"><div
-										class="menu-text">Listado de dueños</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregarduenio}" class="menu-link"><div
-										class="menu-text">Agregar dueño</div></a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="fas fa-dog"></i>
-							</div>
-							<div class="menu-text">Mascotas</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listarmascotas}" class="menu-link"><div
-										class="menu-text">Listado de mascotas</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregarmascota}" class="menu-link"><div
-										class="menu-text">Agregar mascota</div></a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="fas fa-hand-holding-heart"></i>
-							</div>
-							<div class="menu-text">Servicios</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listarservicios}" class="menu-link"><div
-										class="menu-text">Listado de servicios</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregarservicio}" class="menu-link"><div
-										class="menu-text">Agregar servicio</div></a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="menu-item has-sub">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="fas fa-user"></i>
-							</div>
-							<div class="menu-text">Usuario</div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-								<a th:href="@{/listarusuarios}" class="menu-link"><div
-										class="menu-text">Listado de usuarios</div></a>
-							</div>
-							<div class="menu-item">
-								<a th:href="@{/agregarusuario}" class="menu-link"><div
-										class="menu-text">Agregar usuario</div></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- BEGIN minify-button -->
-					<div class="menu-item d-flex">
-						<a href="javascript:;"
-							class="app-sidebar-minify-btn ms-auto d-flex align-items-center text-decoration-none"
-							data-toggle="app-sidebar-minify"><i
-							class="fa fa-angle-double-left"></i></a>
-					</div>
-					<!-- END minify-button -->
-				</div>
-				<!-- END menu -->
-			</div>
-			<!-- END scrollbar -->
-		</div>
-		<div class="app-sidebar-bg"></div>
-		<div class="app-sidebar-mobile-backdrop">
-			<a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a>
-		</div>
-		<!-- END #sidebar -->
-
-		<!-- BEGIN #content -->
-		<div id="content" class="app-content">
-			<!-- BEGIN breadcrumb -->
-			<ol class="breadcrumb float-xl-end">
-				<li class="breadcrumb-item"><a href="javascript:;">Inicio</a></li>
-				<li class="breadcrumb-item active">Mascota</li>
-			</ol>
-			<!-- END breadcrumb -->
-			<!-- BEGIN page-header -->
-			<h1 class="page-header">
-				Mascotas
-			</h1>
-			<!-- END page-header -->
-			<!-- BEGIN panel -->
-			<div class="panel panel-inverse">
-				<div class="panel-heading">
-					<h4 class="panel-title">Agregar mascota</h4>
-					<div class="panel-heading-btn">						 
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-warning" data-toggle="panel-collapse">
-							<i class="fa fa-minus"></i>
-						</a> 
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-danger" data-toggle="panel-remove">
-							<i class="fa fa-times"></i>
-						</a>
-					</div>
-				</div>
-				<div class="panel-body">
-					<form>
-						<div class="mb-3">
-					    <label for="nombreMascota" class="form-label">Nombre de mascota</label>
-					    <input type="text" class="form-control" id="nombreMascota">					    
-					  </div>
-					  <div class="mb-3">
-					    <label for="especie" class="form-label">Especie</label>
-					    <input type="text" class="form-control" id="especie">					    
-					  </div>
-					  <div class="mb-3">
-					    <label for="raza" class="form-label">Raza</label>
-					    <input type="text" class="form-control" id="raza">
-					  </div>
-					  <div class="mb-3">
-					    <label for="genero" class="form-label">Genero</label>
-					    <input type="text" class="form-control" id="genero">
-					  </div>
-					  <div class="mb-3">
-					    <label for="fechaNacimiento" class="form-label">Fecha nacimiento</label>
-					    <input type="date" class="form-control" id="fechaNacimiento">
-					  </div>
-					  <button type="submit" class="btn btn-primary">Guardar</button>
-					</form>
-				</div>
-			</div>
-			<!-- END panel -->
-		</div>
-		<!-- END #content -->
-
-		<!-- BEGIN scroll-top-btn -->
-		<a href="javascript:;"
-			class="btn btn-icon btn-circle btn-success btn-scroll-to-top"
-			data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-		<!-- END scroll-top-btn -->
-	</div>
-	<!-- END #app -->
-
-	<!-- ================== BEGIN core-js ================== -->
-	<script th:src="@{/assets/js/vendor.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net/js/jquery.dataTables.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-bs5/js/dataTables.bootstrap5.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons/js/buttons.colVis.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons/js/buttons.flash.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons/js/buttons.html5.min.js}"></script>
-	<script th:src="@{/assets/plugins/datatables.net-buttons/js/buttons.print.min.js}"></script>
-	<script th:src="@{/assets/plugins/pdfmake/build/pdfmake.min.js}"></script>
-	<script th:src="@{/assets/plugins/pdfmake/build/vfs_fonts.js}"></script>
-	
-	<script th:src="@{/assets/js/demo/table-manage-buttons.demo.js}"></script>
-	
-	<script th:src="@{/assets/js/demo/render.highlight.js}"></script>
-	<script th:src="@{/assets/js/app.min.js}"></script>
-	<!-- ================== END core-js ================== -->
 </body>
 </html>

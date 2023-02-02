@@ -52,4 +52,26 @@ public class MascotaServicioImpl implements IMascotaServicio {
 		return mascotaRepositorio.buscarMascotaPorNombre(nombre);
 	}
 
+	@Override
+	public List<Mascota> buscarMascotaPorEstado(Boolean estado) {
+		// TODO Auto-generated method stub
+		return mascotaRepositorio.buscarMascotaPorEstado(estado);
+	}
+
+	@Override
+	public Mascota buscarMascotaPorId(int idMascota) {
+		// TODO Auto-generated method stub
+		return mascotaRepositorio.buscarMascotaPorId(idMascota);
+	}
+
+	@Override
+	public void eliminarMascotaPorId(int idMascota) {
+		// TODO Auto-generated method stub
+		try {
+			mascotaRepositorio.eliminarMascotaPorId(idMascota);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
 }

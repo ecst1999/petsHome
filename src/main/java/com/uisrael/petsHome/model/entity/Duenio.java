@@ -35,7 +35,7 @@ public class Duenio implements Serializable {
 	private String email;
 
 	@Column(name = "due_estado")
-	private boolean estadoDuenio;
+	private boolean estadoDuenio = true;
 	
 	@OneToMany(mappedBy = "fkDuenio")
 	private List<Mascota> listaMascota = new ArrayList<>();

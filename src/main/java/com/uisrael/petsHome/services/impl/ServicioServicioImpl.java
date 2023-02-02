@@ -52,4 +52,26 @@ public class ServicioServicioImpl implements IServicioServicio {
 		return servicioRepositorio.buscarServicioPorTipo(tipoServicio);
 	}
 
+	@Override
+	public List<Servicio> buscarServicioPorEstado(Boolean estado) {
+		// TODO Auto-generated method stub
+		return servicioRepositorio.buscarServicioPorEstado(estado);
+	}
+
+	@Override
+	public Servicio buscarServicioPorId(int idServ) {
+		// TODO Auto-generated method stub
+		return servicioRepositorio.buscarServicioPorId(idServ);
+	}
+
+	@Override
+	public void eliminarServicioPorId(int idServ) {
+		// TODO Auto-generated method stub
+		try {
+			servicioRepositorio.eliminarServicioPorId(idServ);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
 }

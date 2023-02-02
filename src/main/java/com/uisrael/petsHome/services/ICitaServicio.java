@@ -17,4 +17,8 @@ public interface ICitaServicio {
 	public List<Cita> buscarCitaPorEstado(Boolean estado);
 	
 	public List<Cita> buscarCitaPorMotivo(String motivo);
+	
+	public Cita buscarCitaPorId(int id);
+	
+	public void eliminarCitaPorId(int id);
 }

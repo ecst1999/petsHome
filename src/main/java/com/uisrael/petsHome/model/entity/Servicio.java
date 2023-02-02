@@ -29,7 +29,7 @@ public class Servicio implements Serializable {
 	private String tipoServicio;
 	
 	@Column(name = "ser_estado")
-	private boolean estadoServicio;
+	private boolean estadoServicio = true;
 
 	@OneToMany(mappedBy = "fkServicio")
 	private List<Cita> listaCitas = new ArrayList<>();

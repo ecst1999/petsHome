@@ -27,5 +27,5 @@ public class Usuario implements Serializable {
 	private String clave;
 
 	@Column(name = "usr_estado")
-	private boolean estadoUsuario;
+	private boolean estadoUsuario = true;
 }

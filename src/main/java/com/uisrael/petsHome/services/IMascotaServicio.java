@@ -16,4 +16,10 @@ public interface IMascotaServicio {
 	public List<Mascota> buscarMascotaPorDuenio(Duenio duenio);
 	
 	public List<Mascota> buscarMascotaPorNombre(String nombre);
+	
+	public List<Mascota> buscarMascotaPorEstado(Boolean estado);
+	
+	public Mascota buscarMascotaPorId(int idMascota);
+	
+	public void eliminarMascotaPorId(int idMascota);
 }
